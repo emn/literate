@@ -261,8 +261,9 @@ foreach (cmd; c.commands) {
 }
 
 string css = colorschemeCSS ~ defaultCSS;
-string scripts = "<script>\n" ~ prettify ~ "</script>\n";
-scripts ~= prettifyExtension;
+//string scripts = "<script>\n" ~ prettify ~ "</script>\n";
+//scripts ~= prettifyExtension;
+string scripts = "";
 
 bool use_katex = false;
 
@@ -292,7 +293,8 @@ will be moved up a bit towards it -- otherwise it looks like there is too much e
 between the title and the prose.
 
 --- Write the body
-output ~= "<body onload=\"prettyPrint()\">\n" ~
+//output ~= "<body onload=\"prettyPrint()\">\n" ~
+output ~= "<body>\n" ~
           "<section>\n" ~
           "<h1>" ~ c.title ~ "</h1>\n";
 
