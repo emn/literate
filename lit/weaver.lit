@@ -298,8 +298,9 @@ output ~= "<body onload=\"prettyPrint()\">\n" ~
 
 foreach (s; c.sections) {
     string noheading = s.title == "" ? " class=\"noheading\"" : "";
+    string stitle = numberedSections ? to!string(s.num) ~ ". " ~ s.title : s.title;
     output ~= "<a name=\"" ~ c.num() ~ ":" ~ to!string(s.num) ~ "\"><div class=\"section\"><h" ~ 
-              to!string(sectionDepth) ~ noheading ~ ">" ~ to!string(s.num) ~ ". " ~ s.title ~ 
+              to!string(sectionDepth) ~ noheading ~ ">" ~ stitle ~ 
               "</h" ~ to!string(sectionDepth) ~ "></a>\n";
 
     foreach (block; s.blocks) {
