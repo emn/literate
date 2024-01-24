@@ -260,7 +260,8 @@ foreach (cmd; c.commands) {
     }
 }
 
-string css = colorschemeCSS ~ defaultCSS;
+//string css = colorschemeCSS ~ defaultCSS;
+string css = defaultCSS;
 //string scripts = "<script>\n" ~ prettify ~ "</script>\n";
 //scripts ~= prettifyExtension;
 string scripts = "";
